@@ -17,6 +17,6 @@ TMPFILE=$CURPATH/$SCRPATH'task4_2.tmp'
 /bin/cat /etc/ntp.original | /bin/sed '/^pool/d' | /bin/sed '/^server/d' > /etc/ntp.conf
 echo 'server ua.pool.ntp.org iburst prefer' >> /etc/ntp.conf
 /usr/bin/md5sum  /etc/ntp.conf | /usr/bin/awk '{print $1}' > /etc/ntp.conf.md5
-/bin/cp /etc/ntp.conf /etc/ntp.etalon
+/bin/cp /etc/ntp.conf /etc/ntp.conf.bak
 /usr/sbin/service ntp restart
 echo "* *    * * *   root    $OUTFILE" >> /etc/crontab
