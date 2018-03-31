@@ -3,15 +3,6 @@
 # Task 4.2
 # Eugeniy Khvastunov
 # NTP verify script
-date >> /tmp/ntp_verify.tmp
-CURPATH="$(pwd)"
-SCRPATH="$(echo $0 | rev | cut -c 11- | rev)"
-OUTFILE=$CURPATH/$SCRPATH'task4_1.out'
-TMPFILE=$CURPATH/$SCRPATH'task4_1.tmp'
-#echo "CURPATH: $CURPATH
-#SCRPATH: $SCRPATH
-#OUTFILE: $OUTFILE
-#TMPFILE: $TMPFILE"
 if [ -f /var/run/ntpd.pid ] ; then
         ISNTPRUN=1
 else

@@ -6,11 +6,6 @@
 CURPATH="$(pwd)"
 SCRPATH="$(echo $0 | rev | cut -c 14- | rev)"
 OUTFILE=$CURPATH/$SCRPATH'ntp_verify.sh'
-TMPFILE=$CURPATH/$SCRPATH'task4_2.tmp'
-#echo "CURPATH: $CURPATH
-#SCRPATH: $SCRPATH
-#OUTFILE: $OUTFILE
-#TMPFILE: $TMPFILE"
 /usr/bin/apt-get update
 /usr/bin/apt-get -y install ntp
 /bin/cp /etc/ntp.conf /etc/ntp.original
